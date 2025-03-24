@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "timestamp": "2025-03-20T12:00:00Z",
+  "checksum": "blake3-d92f95eb1b85f8f4c3a6940e4c1a597d",
+  "hierarchy": {
+    "sections": {
+      "home": {
+        "order": ["patient-acquisition", "precision-workflows", "competitive-edge", "partnership-model", "case-studies"],
+        "layout": "vertical-snap",
+        "scroll": "smooth"
+      },
+      "navigation": {
+        "type": "mega-menu",
+        "items": ["precision-workflows", "patient-acquisition", "competitive-edge", "partnership-model"]
+      }
+    },
+    "components": {
+      "header": {
+        "type": "fixed",
+        "transparency": "dynamic",
+        "height": "responsive"
+      },
+      "hero": {
+        "layout": "centered",
+        "background": "image",
+        "overlay": "gradient"
+      }
+    }
+  },
+  "content": {
+    "sections": {
+      "patient-acquisition": {
+        "title": "Break Free from Insurance Dependency",
+        "subtitle": "Attract 15+ High-Value Implant Patients/Month with Precision-First Marketing",
+        "background": "titan_main_hero.png",
+        "checksum": "blake3-f7c3a9b2"
+      },
+      "precision-workflows": {
+        "title": "No More 'Good Enough' Lab Partners",
+        "subtitle": "Patented Facial Scanning Tech That Lets You Charge 30% More",
+        "background": "titan_business_growth2.png",
+        "checksum": "blake3-e2d4b8c1"
+      },
+      "competitive-edge": {
+        "title": "Why Marketing Agencies Fail Dentists",
+        "subtitle": "We Track ROI Per Full-Arch Case – Not Just 'Likes'",
+        "background": "titan_business_growth3.png",
+        "checksum": "blake3-a9c5d7e3"
+      },
+      "partnership-model": {
+        "title": "Boutique Service Meets Scalable Growth",
+        "subtitle": "Guaranteed 48hr Case Turnaround + Dedicated Growth Strategist",
+        "background": "titan_business_growth4.png",
+        "checksum": "blake3-b6f8d2e4"
+      },
+      "case-studies": {
+        "title": "From $800k to $1.2M in 10 Months",
+        "subtitle": "How Dr. Smith Leveraged Precision Smile to Dominate His Market",
+        "background": "titan_business_growth5.png",
+        "checksum": "blake3-c1e7f9a5"
+      }
+    }
+  },
+  "styles": {
+    "colors": {
+      "primary": {
+        "light": "#f0f9ff",
+        "DEFAULT": "#3b82f6",
+        "dark": "#1e40af"
+      },
+      "secondary": {
+        "light": "#f3f4f6",
+        "DEFAULT": "#6b7280",
+        "dark": "#1f2937"
+      }
+    },
+    "typography": {
+      "fonts": {
+        "sans": ["system-ui", "sans-serif"]
+      },
+      "sizes": {
+        "hero": ["2.75rem", "3.3rem"],
+        "heading": ["2rem", "2.5rem"],
+        "body": ["1rem", "1.5rem"]
+      }
+    },
+    "spacing": {
+      "section": {
+        "sm": "70vh",
+        "md": "85vh",
+        "lg": "100vh"
+      }
+    }
+  },
+  "security": {
+    "sections": {
+      "protected": [
+        "header",
+        "navigation",
+        "hero",
+        "footer"
+      ],
+      "modifications": [
+        "content",
+        "cta-text",
+        "background-image"
+      ]
+    }
+  }
+}

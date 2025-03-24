@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "timestamp": "2025-03-20T12:00:00Z",
+  "files": {
+    "src/App.tsx": "blake3-a1b2c3d4",
+    "src/components/layout/Header.tsx": "blake3-e5f6g7h8",
+    "src/components/layout/Footer.tsx": "blake3-i9j0k1l2",
+    "src/components/sections/Hero.tsx": "blake3-m3n4o5p6",
+    "src/components/sections/MainSection.tsx": "blake3-q7r8s9t0",
+    "src/pages/Home.tsx": "blake3-u1v2w3x4"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.22.3",
+    "lucide-react": "^0.344.0"
+  },
+  "layout": {
+    "header": {
+      "height": {
+        "default": "80px",
+        "sticky": "64px"
+      },
+      "zIndex": 50
+    },
+    "sections": {
+      "spacing": "100vh",
+      "snap": true
+    }
+  }
+}
