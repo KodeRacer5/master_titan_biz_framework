@@ -1,0 +1,67 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Enable Brotli compression if available
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml
+</IfModule>
+
+# Enable Gzip compression if Brotli is not available
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml
+</IfModule>
+
+# Set security headers
+<IfModule mod_headers.c>
+  # Prevent clickjacking
+  Header always set X-Frame-Options "DENY"
+  
+  # Enable XSS protection
+  Header always set X-XSS-Protection "1; mode=block"
+  
+  # Prevent MIME type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+  
+  # Strict referrer policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # Content Security Policy
+  Header always set Content-Security-Policy "default-src 'self' https://images.unsplash.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests;"
+  
+  # Permissions policy
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), vr=()"
+  
+  # HSTS (Uncomment in production with proper SSL)
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  
+  # Cache control for static assets
+  <FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif|js|css|svg|woff2?)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+  
+  # No cache for HTML files
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Disable directory listing
+Options -Indexes
+
+# Prevent access to hidden files
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>

@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://titansurgical.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Disallow patterns
+Disallow: /api/
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*?*
+
+# Allow patterns
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+
+# Host
+Host: https://titansurgical.com
